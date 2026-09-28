@@ -1,0 +1,15 @@
+# Secrets - NEVER commit these
+.env
+client_secrets.json
+token.pickle
+
+# Generated media
+output/
+logs/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+temp-audio.m4a
