@@ -343,8 +343,12 @@ def upload_to_youtube(
 # ----------------------------------------------------------------------------
 # Agents
 # ----------------------------------------------------------------------------
+# Model name can be changed in .env (GEMINI_MODEL) without editing code
+MODEL_NAME = os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite")
+
+
 def make_model():
-    return Gemini(model="gemini-2.5-flash-lite", retry_options=retry_config)
+    return Gemini(model=MODEL_NAME, retry_options=retry_config)
 
 script_agent = Agent(
     name="ScriptAgent",
